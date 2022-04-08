@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block title %}
+    Update Post
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ post.date_create }}
+            {{ form.as_table }}
+        </table>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}
